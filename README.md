@@ -1,4 +1,4 @@
-[Live Demo](http://13.232.27.207/angular-api/employees)
+[Live Demo](http://13.232.27.207/angular-api)
 
 
 # Client
