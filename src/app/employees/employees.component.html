@@ -1,0 +1,44 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    <br>
+    <h2 class="page-header" style="text-align: center">Employee List</h2><br>
+    <div class="col-md-12">
+      <div class="col-md-3 employee_list_heading">
+          <label>Name</label>
+        </div>
+        <div class="col-md-3 employee_list_heading">
+            <label>Age</label>
+        </div>
+        <div class="col-md-3 employee_list_heading">
+            <label>Email</label>
+        </div>
+        <div class="col-md-3 employee_list_heading">
+            <label>Action</label>
+            <br><br>
+        </div>
+  
+  </div>
+  <div *ngFor = "let employee of employees">
+
+<div class="col-md-12">
+
+    <div class="col-md-3" style="float: left">
+      {{employee.name}}
+    </div>
+    <div class="col-md-3" style="float: left">
+        {{employee.age}}
+    </div>
+    <div class="col-md-3" style="float: left">
+      {{employee.email}}
+    </div>
+    <div class="col-md-3" style="float: left">
+        <a [routerLink]="['/employees', employee.id]" routerLinkActive="active">
+          <input type="button" value="Edit" class="btn btn-success">
+        </a>
+        <input type="button" (click) = "deleteEmployee(employee.id)" value="Delete" class="btn btn-danger">
+        <br><br>
+    </div>
+  </div>  
+  </div>  
+
+</div>
